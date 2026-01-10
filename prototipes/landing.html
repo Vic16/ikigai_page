@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ikigai Aikido Dojo - Encuentra tu </title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0d3d8c", // Deep Blue from logo
+                        secondary: "#e53e3e", // Red from logo
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "Noto Sans JP", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .japanese-text {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <nav
+        class="fixed w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center space-x-3">
+                    <img alt="Ikigai Aikido Dojo Logo" class="h-14 w-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBPfkL-CXxUHx9zW429gHYVd0ELwQ3PLCX7VJRrOCLVZZG9jjleCxBr69dQSCOpp8oplJLM8LnL0enZsP-XzatwwzonKb7vxYgd0iLmFLlrQ_XAkj88-Bj4caEmh5kyJR8S4Q0ut7mZgtC6AE4YX77SQVqTivVofoBvaV6-tWx4FjfEfQuiR6pHtbPtsecWnTRe6vXwwyo93tECNuYzlyCDElKOP490PVFaWXdam-Dd3BVTadiEOAfnrfScNmdnc8gV1o5yxiS7XgZ" />
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Inicio</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#historia">Historia</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#horarios">Horarios</a>
+                    <a class="text-sm font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
+                    <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        id="theme-toggle">
+                        <span class="material-icons text-xl dark:hidden">dark_mode</span>
+                        <span class="material-icons text-xl hidden dark:inline">light_mode</span>
+                    </button>
+                    <a class="bg-primary hover:bg-blue-800 text-white px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/20"
+                        href="#contacto">
+                        Empieza hoy
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 dark:text-slate-300 p-2">
+                        <span class="material-icons text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="relative h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Aikido training session" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPISwN9CO5Xk62HmDwH_UL0Sb85Dg5Cnl2vktMUH30QDy-O_mZRYhjLCPDbsB2Q5lL3-zXDGvBVgErKAzJ7u1D7I9unsTjHjJVZftw9suY7CnrYdWg-9Ai1VUK6aiFncRJS2Yq_r5VrdJTgEzijS2GkIKpmZl_MBJrZxnE5UUQm8SIqHJOh0srUOIbK4NqXITS2zWn16cCkbfqDUZjVY0KmDRx3e5RyItyj5sTYInnRexP_HJrt9MpPxc4gIlY_lIW5LV5Mwc7iA1j" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+            <div class="max-w-2xl">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 text-xs font-bold uppercase tracking-widest mb-4">
+                    Tradición y Armonía
+                </span>
+                <h1 class="text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-6">
+                    Encuentra tu <span class="text-secondary italic">Ikigai</span> a través del Aikido
+                </h1>
+                <p class="text-xl text-slate-200 mb-10 leading-relaxed">
+                    Descubre el arte de la paz. Fortalece tu cuerpo, enfoca tu mente y encuentra equilibrio espiritual
+                    en nuestro dojo tradicional.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg text-center transition-all hover:bg-blue-800 hover:shadow-xl hover:shadow-primary/30"
+                        href="#contacto">
+                        Empieza hoy
+                    </a>
+                    <a class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg text-center transition-all hover:bg-white/20"
+                        href="#historia">
+                        Conócenos
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <span class="material-icons text-white text-3xl">expand_more</span>
+        </div>
+    </header>
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 bg-primary/10 dark:bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-transform group-hover:rotate-6">
+                        <span class="material-icons text-primary text-4xl">self_improvement</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Paz Interior</h3>
+                    <p class="text-slate-600 dark:text-slate-400">El Aikido no busca la destrucción del oponente, sino
+                        la resolución pacífica de los conflictos.</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 bg-secondary/10 dark:bg-secondary/20 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-transform group-hover:rotate-6">
+                        <span class="material-icons text-secondary text-4xl">fitness_center</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Disciplina Física</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Desarrolla flexibilidad, coordinación y una postura
+                        centrada a través de movimientos circulares y fluidos.</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 bg-primary/10 dark:bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-transform group-hover:rotate-6">
+                        <span class="material-icons text-primary text-4xl">groups</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Comunidad</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Únete a una familia dedicada al crecimiento personal y
+                        el respeto mutuo en un ambiente acogedor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 overflow-hidden" id="historia">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-secondary/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
+                    <img alt="Master practicing Aikido" class="rounded-3xl shadow-2xl relative z-10"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwS6Y9pp7aEOs4tXNlwl2-9vexZIdarZIIGF1eo4a3Xn-oSU-xknTeaqu-H99xM1StUyJ66V_zFWNd1XyhlLugatpUsu7C7hmGgsqerX7TRXEKFtRMYeO8lvagntZeOnhRzNvJ28ZFE1JhmhOO3JUTsGHBkNwiAzf5N2w2_hOHPu2SIT0Pzmue_SXih7geN5_QsMHKYxw19ldHIgdP4zn6-mZO1BDTRSX7u4hyKTIe7nyVKAOauw2_2YJ2-DAWkO_oRFgAghhuRG0u" />
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-primary font-bold tracking-tighter uppercase text-sm mb-4">Sobre nosotros</h2>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-8 leading-tight">Nuestra Historia y
+                        Filosofía</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        Fundado bajo los principios de O-Sensei Morihei Ueshiba, Ikigai Aikido Dojo es más que una
+                        escuela de artes marciales; es un espacio dedicado a la búsqueda del propósito de vida.
+                    </p>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                        En nuestro dojo, practicamos Aikido como un camino (Do) de unificación de la mente y el cuerpo.
+                        No competimos contra otros, sino que trabajamos juntos para superar nuestras propias
+                        limitaciones.
+                    </p>
+                    <div
+                        class="border-l-4 border-secondary pl-6 italic text-xl font-medium text-slate-700 dark:text-slate-300">
+                        "El Aikido es el arte de la reconciliación con el universo."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-slate-900 text-white" id="horarios">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold mb-4">Horarios de Práctica</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-700">
+                            <th class="py-6 px-4 font-semibold text-slate-400">Hora</th>
+                            <th class="py-6 px-4 font-semibold">Lunes</th>
+                            <th class="py-6 px-4 font-semibold">Martes</th>
+                            <th class="py-6 px-4 font-semibold">Miércoles</th>
+                            <th class="py-6 px-4 font-semibold">Jueves</th>
+                            <th class="py-6 px-4 font-semibold">Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800">
+                        <tr>
+                            <td class="py-6 px-4 text-slate-400 font-medium">07:00 - 08:30</td>
+                            <td class="py-6 px-4"><span
+                                    class="bg-primary/30 text-primary-light px-3 py-1 rounded text-sm">Avanzado</span>
+                            </td>
+                            <td class="py-6 px-4">-</td>
+                            <td class="py-6 px-4"><span
+                                    class="bg-primary/30 text-primary-light px-3 py-1 rounded text-sm">Avanzado</span>
+                            </td>
+                            <td class="py-6 px-4">-</td>
+                            <td class="py-6 px-4"><span
+                                    class="bg-primary/30 text-primary-light px-3 py-1 rounded text-sm">Avanzado</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-6 px-4 text-slate-400 font-medium">17:00 - 18:30</td>
+                            <td class="py-6 px-4"><span
+                                    class="bg-secondary/30 text-secondary px-3 py-1 rounded text-sm">Infantil</span>
+                            </td>
+                            <td class="py-6 px-4"><span
+                                    class="bg-secondary/30 text-secondary px-3 py-1 rounded text-sm">Infantil</span>
+                            </td>
+                            <td class="py-6 px-4"><span
+                                    class="bg-secondary/30 text-secondary px-3 py-1 rounded text-sm">Infantil</span>
+                            </td>
+                            <td class="py-6 px-4"><span
+                                    class="bg-secondary/30 text-secondary px-3 py-1 rounded text-sm">Infantil</span>
+                            </td>
+                            <td class="py-6 px-4"><span
+                                    class="bg-secondary/30 text-secondary px-3 py-1 rounded text-sm">Infantil</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-6 px-4 text-slate-400 font-medium">19:00 - 20:30</td>
+                            <td class="py-6 px-4"><span class="bg-slate-700 px-3 py-1 rounded text-sm">General</span>
+                            </td>
+                            <td class="py-6 px-4"><span class="bg-slate-700 px-3 py-1 rounded text-sm">General</span>
+                            </td>
+                            <td class="py-6 px-4"><span class="bg-slate-700 px-3 py-1 rounded text-sm">General</span>
+                            </td>
+                            <td class="py-6 px-4"><span class="bg-slate-700 px-3 py-1 rounded text-sm">General</span>
+                            </td>
+                            <td class="py-6 px-4"><span class="bg-slate-700 px-3 py-1 rounded text-sm">General</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="py-24" id="contacto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 bg-primary text-white">
+                    <h2 class="text-3xl font-bold mb-8">Contáctanos</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <span class="material-icons">location_on</span>
+                            <p>Calle de la Armonía, 42<br />28001 Madrid, España</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="material-icons">phone</span>
+                            <p>+34 912 345 678</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="material-icons">email</span>
+                            <p>hola@ikigaiaikido.com</p>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <h4 class="font-bold mb-4">Síguenos</h4>
+                        <div class="flex space-x-4">
+                            <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                                href="#">
+                                <img alt="Instagram" class="w-5 h-5 invert"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC7FqcaD-KlQPlBYxCvXaDDa8z_tEIFbzRxH-vgz-a1c_H0rd62aBE8DIYd3IooXqJgiEj8ZoHbDPQNFWyYwWcjC9MUmp9SgkEpHXPi0oZqhmBPhzsc97vlp--oPLqVdxK_O8eMcNiJqJshfaOjZJLSlKQLLNFAVWZFJUm3ArlLsFHv__Ac9rsqadUs559yGATZpv90lR-H_I6DE6HhmoiIvO9RSTh4s3c3BCZxHLcQb8mqLRNh9x6QF1K5JZ5b-wQjHBwBBuQ02BP" />
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                                href="#">
+                                <img alt="Youtube" class="w-5 h-5 invert"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQTmImt5AyrPIm8WoY01ri8oYj1RrYge2wLXRYm5YPKqY-xSzFwsRzLHQfTH9n56GJ1Gdgptn99jpKIkTXG-zKR6mOWdiX4788YaXD97NcmmkFcFfPDGm62l_1R_t-xRoy1UfPv8RvHsIZFsXVpCiLdUHc56il2vMIly5WlRQjxy47ewTi6IGZl9rG4RnPgIhzFKyGY774Xqbha_xdPQfYiS3JqAQptJWpVqANiDLp4gZE-GWRjG7J4AgOJNd7ciQqna7rNz3DIHNh" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-12">
+                    <form action="#" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Nombre completo</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                                type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Correo electrónico</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                                type="email" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Mensaje</label>
+                            <textarea
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                                rows="4"></textarea>
+                        </div>
+                        <button
+                            class="w-full bg-secondary text-white font-bold py-4 rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-secondary/20"
+                            type="submit">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img alt="Ikigai Aikido Logo" class="h-16 mx-auto mb-6 opacity-80"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwja2hAK5ozUXJ1hXy2qwPTdw53U2qG36D8dEXAiVCIv_LE3_gE3zW8C8tfiGp-0XOwFqTppUsuDsf7RupOaaBpD-NaStb1GS0ZSE4SYyxz3tg2rUyIM5xlZ9klR2_cbTRWpNZrLaen92x3ryjnqsDjKbMDEg-sutcuGsN8bnEpaIIf715SGHxAWuNX9d5iCsQA-6k68XCdrZPkHlFl8hFSVmQCaf8nxylDN875AFyGttgE_jtT3JrJw_st_xnTfcp5GvGNZUJIj97" />
+            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                © 2024 Ikigai Aikido Dojo. Todos los derechos reservados.
+            </p>
+            <p class="text-slate-400 text-xs mt-2 uppercase tracking-widest japanese-text">
+                生き甲斐 合気道 道場
+            </p>
+        </div>
+    </footer>
+    <script>
+        // Dark mode toggle logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        // Check for saved theme
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

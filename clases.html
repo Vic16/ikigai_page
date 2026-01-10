@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ikigai Aikido Dojo</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Inter:wght@300;400;600&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00338d", // Deep Blue from logo
+                        secondary: "#e31e24", // Red from logo
+                        "background-light": "#fdfdfb",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Inter", "sans-serif"],
+                        trad: ["Noto Serif JP", "serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .brush-border {
+            border-image-source: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5C20 2 40 8 60 5C80 2 100 5 100 5' stroke='%2300338d' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            border-image-slice: 0 0 100% 0;
+            border-bottom: 4px solid transparent;
+        }
+
+        .text-vertical {
+            writing-mode: vertical-rl;
+        }
+
+        .japanese-bg {
+            background-image: radial-gradient(#00338d10 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #00338d;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-body transition-colors duration-300">
+    <nav
+        class="fixed w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img alt="Ikigai Aikido Dojo Logo" class="h-12 w-auto" src="./images/Logo_Ikigai_sinfondo.png" />
+                <div class="hidden md:block">
+                    <span class="block text-sm font-bold tracking-widest text-primary uppercase">Ikigai</span>
+                    <span class="block text-xs font-medium text-secondary uppercase tracking-[0.2em]">Aikido Dojo</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-semibold text-sm uppercase tracking-wider">
+                <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+                <a class="hover:text-primary transition-colors" href="history.html">Historia</a>
+                <a class="text-primary border-b-2 border-primary" href="classes.html">Clases</a>
+                <a class="hover:text-primary transition-colors" href="contact.html">Contacto</a>
+            </div>
+            <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"
+                onclick="document.documentElement.classList.toggle('dark')">
+                <span class="material-icons-round text-slate-600 dark:text-slate-400">dark_mode</span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="clases" class="py-24 relative overflow-hidden border-t border-slate-100 dark:border-slate-800">
+        <div class="absolute inset-0 japanese-bg opacity-30"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2
+                        class="text-4xl md:text-5xl font-display font-bold text-black dark:text-white leading-tight mb-4">
+                        Horarios de <span class="text-secondary italic">Entrenamiento</span>
+                    </h2>
+                    <div class="w-20 h-1 bg-primary mb-6"></div>
+                    <p class="text-slate-600 dark:text-slate-400 font-trad">
+                        La práctica en el dojo se divide en sesiones de Aikido general y sesiones específicas de armas
+                        tradicionales, permitiendo un desarrollo integral del practicante.
+                    </p>
+                </div>
+                <div class="hidden lg:block opacity-10">
+                    <span class="text-7xl font-trad select-none font-bold">稽古</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="p-8 border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-transparent hover:border-primary transition-all group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-icons-round text-primary">calendar_today</span>
+                        <h3 class="font-display text-2xl dark:text-white">Miércoles</h3>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-slate-900 dark:text-slate-100">18:20 – 20:00</span>
+                        <p class="text-secondary uppercase tracking-widest text-xs font-bold mt-2">Aikido General</p>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-500 leading-relaxed font-body">
+                        Enfoque en técnicas fundamentales (Kihon Waza) y el desarrollo de la flexibilidad y las caídas
+                        (Ukemi).
+                    </p>
+                </div>
+
+                <div
+                    class="p-8 border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-transparent hover:border-primary transition-all group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-icons-round text-primary">calendar_today</span>
+                        <h3 class="font-display text-2xl dark:text-white">Jueves</h3>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-slate-900 dark:text-slate-100">19:30 – 21:00</span>
+                        <p class="text-secondary uppercase tracking-widest text-xs font-bold mt-2">Aikido General</p>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-500 leading-relaxed font-body">
+                        Práctica de técnicas aplicadas y mejora de la fluidez en el contacto con el compañero.
+                    </p>
+                </div>
+
+                <div
+                    class="p-8 border-2 border-primary dark:border-primary bg-primary/5 dark:bg-primary/10 transition-all group relative">
+                    <div
+                        class="absolute -top-3 right-4 bg-secondary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">
+                        Especializado
+                    </div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-icons-round text-secondary">flare</span>
+                        <h3 class="font-display text-2xl dark:text-white">Domingo</h3>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-slate-900 dark:text-slate-100">11:00 – 13:00</span>
+                        <p class="text-primary uppercase tracking-widest text-xs font-bold mt-2">Armas: Jo & Bokken</p>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-body">
+                        Sesión dedicada exclusivamente al <strong>Buki Waza</strong>. Estudio del bastón de madera
+                        <strong>Jo</strong> y la
+                        espada <strong>Bokken</strong> para refinar la precisión y el timing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-20 p-8 border border-slate-200 dark:border-slate-800 text-center">
+                <p class="text-slate-500 dark:text-slate-400 font-trad italic">
+                    "No hay nada en la vida que no contenga una lección, si estás vivo, siempre tendrás algo que
+                    aprender."
+                </p>
+                <p class="text-xs uppercase tracking-[0.3em] mt-4 text-primary font-bold">— Morihei Ueshiba</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-2xl font-display">Ikigai Aikido Dojo</span>
+                    </div>
+                    <p class="text-slate-400 max-w-sm">
+                        Desde 2025, guiamos a nuestros alumnos en el Arte de la Paz, combinando disciplina,
+                        armonía y práctica dedicada para fortalecer el cuerpo, calmar la mente y descubrir tu propio
+                        camino de equilibrio.
+                    </p>
+
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs text-secondary mb-6">Visítanos</h4>
+                    <address class="not-italic text-slate-400 leading-relaxed">
+                        Calle Almansa 47<br />
+                        Madrid, España<br />
+                        ikigai.aikido.madrid@gmail.com<br />
+                    </address>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-slate-500 uppercase tracking-widest">
+                    © 2025 Ikigai Aikido Dojo. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6">
+                    <a class="text-slate-400 hover:text-white relative group"
+                        href="https://www.instagram.com/ikigai_aikidodojo?igsh=djNxdDA0NzF3cWx2" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="material-icons-round">camera_alt</span>
+                        <span
+                            class="absolute -top-6 left-1/2 -translate-x-1/2 px-2 py-1 text-xs bg-slate-900 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                            Instagram
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

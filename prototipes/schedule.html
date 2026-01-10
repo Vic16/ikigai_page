@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Class Schedule | Ikigai Aikido Dojo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Sans+JP:wght@300;400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D3C8C", // The deep blue from the logo
+                        accent: "#E61E25",  // The red from the logo
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "Noto Sans JP", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: 100px repeat(6, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            .schedule-grid {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+    <nav
+        class="border-b border-slate-200 dark:border-slate-800 sticky top-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <img alt="Ikigai Aikido Dojo Logo" class="h-12 w-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrrX-aDj5Lu8U1hktRRDkkvuOPRD67a1aHtV-HWiCUzJDBG0Fs_BbTPJAD4sK3qTQlGfb0jtLEEbCDCalEaIXDZgOWPExM3JETG0HAvwi655-41CpfeoUXkNERokpx1BwUgj8r6qh0Sv-1HQR5rCakTwxc4B7K-DxedlBN94gQawAn1gDZlazwAaZ7tNXjuNrLY33EadZZSWnWGBMltwXNxeJFgDQwRX7Iy-7lrb-TSNE8xfEzJPHebn90DQPPJjKjf9nVp30VJAVF" />
+                </div>
+                <div class="hidden md:flex items-center space-gap-8 space-x-8">
+                    <a class="font-medium hover:text-primary dark:hover:text-blue-400" href="#">Home</a>
+                    <a class="font-medium text-primary dark:text-blue-400 border-b-2 border-primary"
+                        href="#">Schedule</a>
+                    <a class="font-medium hover:text-primary dark:hover:text-blue-400" href="#">About</a>
+                    <a class="font-medium hover:text-primary dark:hover:text-blue-400" href="#">Instructors</a>
+                    <button class="bg-primary hover:bg-opacity-90 text-white px-6 py-2 rounded-full transition-all">Free
+                        Trial</button>
+                </div>
+                <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"
+                    onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-icons text-xl">dark_mode</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">Dojo Class
+                Schedule</h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                Join us on the mat. We offer classes for all skill levels from Monday to Saturday. Beginners are always
+                welcome to observe or try a session.
+            </p>
+        </div>
+        <div
+            class="bg-white dark:bg-slate-900 rounded-xl shadow-xl overflow-hidden mb-16 border border-slate-200 dark:border-slate-800">
+            <div class="hidden md:block overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th class="py-4 px-4 text-left font-semibold border-r border-white/10 w-32">Time</th>
+                            <th class="py-4 px-4 text-center font-semibold border-r border-white/10">Monday</th>
+                            <th class="py-4 px-4 text-center font-semibold border-r border-white/10">Tuesday</th>
+                            <th class="py-4 px-4 text-center font-semibold border-r border-white/10">Wednesday</th>
+                            <th class="py-4 px-4 text-center font-semibold border-r border-white/10">Thursday</th>
+                            <th class="py-4 px-4 text-center font-semibold border-r border-white/10">Friday</th>
+                            <th class="py-4 px-4 text-center font-semibold">Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                            <td
+                                class="p-4 font-medium text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/30">
+                                07:00 AM</td>
+                            <td class="p-4 text-center">
+                                <div class="bg-slate-100 dark:bg-slate-800 p-2 rounded text-sm">Morning Training (All
+                                    Levels)</div>
+                            </td>
+                            <td class="p-4 text-center">-</td>
+                            <td class="p-4 text-center">
+                                <div class="bg-slate-100 dark:bg-slate-800 p-2 rounded text-sm">Morning Training (All
+                                    Levels)</div>
+                            </td>
+                            <td class="p-4 text-center">-</td>
+                            <td class="p-4 text-center">
+                                <div class="bg-slate-100 dark:bg-slate-800 p-2 rounded text-sm">Morning Training (All
+                                    Levels)</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div
+                                    class="bg-accent/10 text-accent border border-accent/20 p-2 rounded text-sm font-semibold italic">
+                                    Special Seminar (Monthly)</div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                            <td
+                                class="p-4 font-medium text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/30">
+                                10:00 AM</td>
+                            <td class="p-4 text-center">-</td>
+                            <td class="p-4 text-center">-</td>
+                            <td class="p-4 text-center">-</td>
+                            <td class="p-4 text-center">-</td>
+                            <td class="p-4 text-center">-</td>
+                            <td class="p-4 text-center">
+                                <div
+                                    class="bg-blue-100 dark:bg-blue-900/30 text-primary dark:text-blue-300 p-2 rounded text-sm border border-primary/10">
+                                    Beginners Intensive</div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                            <td
+                                class="p-4 font-medium text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/30">
+                                05:30 PM</td>
+                            <td class="p-4 text-center">
+                                <div
+                                    class="bg-blue-100 dark:bg-blue-900/30 text-primary dark:text-blue-300 p-2 rounded text-sm border border-primary/10">
+                                    Beginners Class</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div class="bg-slate-100 dark:bg-slate-800 p-2 rounded text-sm">Kids Class</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div
+                                    class="bg-blue-100 dark:bg-blue-900/30 text-primary dark:text-blue-300 p-2 rounded text-sm border border-primary/10">
+                                    Beginners Class</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div class="bg-slate-100 dark:bg-slate-800 p-2 rounded text-sm">Kids Class</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div
+                                    class="bg-blue-100 dark:bg-blue-900/30 text-primary dark:text-blue-300 p-2 rounded text-sm border border-primary/10">
+                                    Beginners Class</div>
+                            </td>
+                            <td class="p-4 text-center">-</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                            <td
+                                class="p-4 font-medium text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/30">
+                                06:45 PM</td>
+                            <td class="p-4 text-center">
+                                <div class="bg-slate-100 dark:bg-slate-800 p-2 rounded text-sm">Advanced Practice</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div
+                                    class="bg-accent/10 text-accent border border-accent/20 p-2 rounded text-sm font-semibold">
+                                    Weapons (Bokken/Jo)</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div class="bg-slate-100 dark:bg-slate-800 p-2 rounded text-sm">Advanced Practice</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div
+                                    class="bg-accent/10 text-accent border border-accent/20 p-2 rounded text-sm font-semibold">
+                                    Weapons (Bokken/Jo)</div>
+                            </td>
+                            <td class="p-4 text-center">
+                                <div class="bg-slate-100 dark:bg-slate-800 p-2 rounded text-sm font-semibold">Open Mat /
+                                    Jiyu-waza</div>
+                            </td>
+                            <td class="p-4 text-center">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="md:hidden divide-y divide-slate-100 dark:divide-slate-800">
+                <div class="p-4 bg-primary text-white font-bold flex items-center gap-2">
+                    <span class="material-icons">event_note</span> Mobile Schedule View
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-4 text-primary dark:text-blue-400">Monday</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800 p-3 rounded-lg">
+                            <span class="text-sm font-medium">07:00 AM</span>
+                            <span class="text-sm">Morning Training</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border-l-4 border-primary">
+                            <span class="text-sm font-medium">05:30 PM</span>
+                            <span class="text-sm font-semibold">Beginners Class</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800 p-3 rounded-lg">
+                            <span class="text-sm font-medium">06:45 PM</span>
+                            <span class="text-sm">Advanced Practice</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-4 text-primary dark:text-blue-400">Saturday</h3>
+                    <div class="space-y-4">
+                        <div
+                            class="flex justify-between items-center bg-accent/5 dark:bg-accent/10 p-3 rounded-lg border-l-4 border-accent">
+                            <span class="text-sm font-medium">07:00 AM</span>
+                            <span class="text-sm font-semibold text-accent">Special Seminar</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-center bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border-l-4 border-primary">
+                            <span class="text-sm font-medium">10:00 AM</span>
+                            <span class="text-sm font-semibold">Beginners Intensive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div
+                class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 group hover:border-primary/50 transition-all">
+                <div
+                    class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center text-primary dark:text-blue-400 mb-6">
+                    <span class="material-icons">diversity_3</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Beginners Class</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    Focused on the fundamentals of ukemi (safe falling), basic footwork (ashisabaki), and foundational
+                    techniques. Perfect for those new to martial arts.
+                </p>
+                <div class="mt-4 flex items-center gap-2 text-primary dark:text-blue-400 font-semibold text-sm">
+                    <span>Learn more</span>
+                    <span class="material-icons text-sm">arrow_forward</span>
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 group hover:border-accent/50 transition-all">
+                <div
+                    class="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center text-accent mb-6">
+                    <span class="material-icons">swords</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Weapons Training</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    Integration of the Bokken (wooden sword) and Jo (staff) into Aikido practice. Understanding
+                    distance, timing, and center-line principles through weaponry.
+                </p>
+                <div class="mt-4 flex items-center gap-2 text-accent font-semibold text-sm">
+                    <span>Learn more</span>
+                    <span class="material-icons text-sm">arrow_forward</span>
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 group hover:border-slate-400 dark:hover:border-slate-500 transition-all">
+                <div
+                    class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400 mb-6">
+                    <span class="material-icons">military_tech</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Advanced Practice</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    Dynamic training for intermediate and advanced students. Focuses on fluid movements, multiple
+                    attackers (randori), and refined precision.
+                </p>
+                <div class="mt-4 flex items-center gap-2 text-slate-500 dark:text-slate-400 font-semibold text-sm">
+                    <span>Learn more</span>
+                    <span class="material-icons text-sm">arrow_forward</span>
+                </div>
+            </div>
+        </div>
+        <div
+            class="bg-primary dark:bg-blue-950 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 flex items-center justify-center">
+                <img alt="" class="w-96 grayscale invert"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQX6DqH3zFM2GMsCljDSfdmPZ64ys-uyZRjyS_FJUfbVb22mC4UIbR_CgmyAoucwDOkDI5VNaN3oiMAAXeVaylU-Brr7ftgUid73DB1GFeiwYbe2Xwe-qx31Ii-aUURSEUjOdKWQPv5turOXcFjrug0AogTsFB7TU-OS8_orI7-DueyxAm02L_AvVUyGF6dwiugKlT58cynk1mgkUy3R_6U5Ar3RG4JWWHMj3VC9CgS7d9y5bgCHyRSLtUJ2l0q9SEPiU3wRVAz3Sh" />
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Start Your Journey Today</h2>
+                <p class="text-blue-100 mb-8 max-w-xl mx-auto">First class is always free. No experience or equipment
+                    required for your first session.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a class="bg-accent hover:bg-red-700 text-white font-bold py-3 px-10 rounded-full transition-colors inline-block"
+                        href="#">Book Free Trial</a>
+                    <a class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-10 rounded-full border border-white/20 backdrop-blur-sm transition-colors inline-block"
+                        href="#">Contact Sensei</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <img alt="Logo" class="h-10 w-auto opacity-75 hover:opacity-100 transition-opacity"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0QfMXib94WL_-SQmWV7y7NLsI6MEjPC5yam_z5jdg7404RUvr4iz0QgbiKpUusEi_fmmII2ERTZx_QGg3UtYW6OEl93iFkikhqZXZu5fmkhV7vNckAe6fAj2ueSuqiB7yS02NFTIZK6H7Ye_K84PPr_kmtDgEDZGJ4xKrAfuI5wewHiadLh0VN-P1nrg7ZOr3ixirwEqFD0Npu-Eu6FAipA16w1sGyC5SmGoDAaYrma0N7SnC0yUUWexiMHVK0we8D4RRrOBiwye6" />
+                    <div>
+                        <p class="font-bold text-slate-900 dark:text-white">Ikigai Aikido Dojo</p>
+                        <p class="text-xs text-slate-500">123 Tradition Lane, Kyoto District</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 text-sm font-medium text-slate-600 dark:text-slate-400">
+                    <a class="hover:text-primary" href="#">Safety Protocol</a>
+                    <a class="hover:text-primary" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary" href="#">Member Portal</a>
+                </div>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                        href="#">
+                        <span class="material-icons text-xl">facebook</span>
+                    </a>
+                    <a class="w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                        href="#">
+                        <span class="material-icons text-xl">camera_alt</span>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-slate-400 text-xs">
+                © 2023 Ikigai Aikido Dojo. All rights reserved. Budo in Harmony.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
